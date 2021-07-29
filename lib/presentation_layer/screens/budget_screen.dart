@@ -53,6 +53,7 @@ class _BudgetScreenState extends State<BudgetScreen> {
     final items = snapshot.data!;
 
     return ListView.builder(
+      physics: BouncingScrollPhysics(),
       itemCount: items.length + 1,
       itemBuilder: (BuildContext context, int index) {
         if (index == 0) return SpendingChart(items: items);

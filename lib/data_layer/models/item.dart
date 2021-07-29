@@ -17,13 +17,13 @@ class Item {
 
     final List name = (properties['Name']?['title'] ?? []);
     final String? category = properties['Category']?['select']?['name'];
-    final double? price = properties['Price']?['number'];
+    final dynamic price = (properties['Price']?['number'] ?? 0).toDouble();
     final String? date = properties['Date']?['date']?['start'];
 
     return Item(
       name: name.isNotEmpty ? name[0]['plain_text'] : '???',
-      category: category ?? 'Any',
-      price: price ?? 0.00,
+      category: category ?? 'Uncategorized',
+      price: price,
       date: date != null ? DateTime.parse(date) : DateTime.utc(1970),
     );
   }
