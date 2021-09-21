@@ -1,6 +1,7 @@
 # Budget Tracker With Notion Api Using Flutter
 
-From [Marcus Ng](https://youtu.be/3vhWx2LT-SY)
+## Resources
+1. https://youtu.be/3vhWx2LT-SY
 
 ## Screenshots
 
